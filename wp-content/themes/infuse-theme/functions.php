@@ -176,3 +176,15 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function enqueue_lexend_google_font() {
+    wp_enqueue_style( 'lexend-google-font', 'https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap', false );
+    wp_enqueue_style( 'roboto-google-font', 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap', false );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_lexend_google_font' );
+
+function enqueue_custom_homepage_script() {
+	if(is_front_page()){
+        wp_enqueue_script('testemonials-js', get_template_directory_uri() . '/js/testemonial.js');
+	}
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_homepage_script');
