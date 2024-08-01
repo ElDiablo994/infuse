@@ -26,45 +26,8 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'infuse-theme' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$infuse_theme_description = get_bloginfo( 'description', 'display' );
-			if ( $infuse_theme_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $infuse_theme_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'infuse-theme' ); ?></button>
-<<<<<<< Updated upstream
-			<div class="contactus-menu">
-              <span class="contactus-text"><span>Our Clients</span></span>
-              <span class="contactus-text02"><span>Our Model</span></span>
-              <span class="contactus-text04"><span>Our Audience</span></span>
-              <div class="contactus-insights">
-                <span class="contactus-text06"><span>Insights</span></span>
-                <span class="contactus-text08"></span>
-              </div>
-              <div class="contactus-group39618">
-                <span class="contactus-text09"></span>
-                <span class="contactus-text10"><span>What We Do</span></span>
-              </div>
-              <div class="contactus-group39601">
-                <span class="contactus-text12"><span>Our Company</span></span>
-                <span class="contactus-text14"></span>
-              </div>
-=======
 			<div class="contactus-menu_desktop">
 				<div class="inner-contactus-menu">
 					<span class="inner_menu-item contactus-text contacus-menu_item">
@@ -123,7 +86,6 @@
 						</button>
 					</div>
 				</div>
->>>>>>> Stashed changes
             </div>
 			<div class="contactus-menu_mobile">
 				<div class="contactus-menu-mail">
